@@ -734,13 +734,13 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
             output_path = os.path.join(save_dir, 'results_test_probabilistic_tracking.json')
 
     if data_type == "mini":
-        data_root = 'C:/James/σχολη/10/tracking_results_paper_megvii/nuscenes_dataset/nuscenes/mini'  # allaje to
+        data_root = 'root/nuscenes/mini'  # allaje to
         version = 'v1.0-mini'
         if 'train' in data_split:
-            detection_file = 'C:/James/σχολη/10/tracking_results_paper_megvii/nuscenes_dataset/nuscenes_new/megvii_train.json'
+            detection_file = 'root/megvii_train.json'
             output_path = os.path.join(save_dir, 'results_minitrain_probabilistic_tracking.json')
         if "val" in data_split:
-            detection_file = 'C:/James/σχολη/10/tracking_results_paper_megvii/nuscenes_dataset/nuscenes_new/megvii_train.json'
+            detection_file = 'root/nuscenes_new/megvii_train.json'
             output_path = os.path.join(save_dir, 'results_minival_probabilistic_tracking.json')
         if "test" in data_split:
             print("there are no scenes from test split in the mini version")
