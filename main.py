@@ -819,10 +819,10 @@ def track_nuscenes(data_split, covariance_id, match_distance, match_threshold, m
                 cycle_time = time.time() - start_time
                 total_time += cycle_time
 
-                # get next frame and continue the while loop
+
                 current_sample_token = nusc.get('sample', current_sample_token)['next']
 
-            # left while loop and mark this scene as processed
+
             processed_scene_tokens.add(scene_token)
         except Exception as e:
             #print(f"skipping =  {sample_token}: {e}")
