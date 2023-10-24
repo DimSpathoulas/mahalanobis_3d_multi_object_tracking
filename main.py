@@ -673,7 +673,7 @@ def format_sample_result(sample_token, tracking_name, tracker, nusc):
     current_position = np.array([tracker[3], tracker[4]])  # Current position [x, y]
     current_time = sample_token_to_time(sample_token, nusc)  # retrieve current time from sample_token
     if tracking_id in previous_positions:
-        prev_position, prev_time = previous_positions[tracking_id]  # x,y and timestamp in secs
+        prev_position, prev_time = previous_positions[tracking_id]  # x,y and timestamp
         time_diff =(current_time - prev_time).total_seconds()  # Compute time difference in seconds
         velocity = (current_position - prev_position) / time_diff  # Compute velocity in m/s
     else:
